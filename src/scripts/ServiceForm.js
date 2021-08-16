@@ -54,7 +54,7 @@ export const serviceForm = () =>{
             <input type="date" name="serviceDate" class="input" />
         </div>
         <div class="field">
-            <label class="label" for="serviceLength">How many hours</label>
+            <label class="label" for="serviceLength">How many hours for event</label>
             <input type="number" name="serviceLength" class="input" />
         </div>
 
