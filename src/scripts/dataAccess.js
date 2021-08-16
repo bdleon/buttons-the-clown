@@ -21,3 +21,20 @@ export const fetchReservations = () => {
 export const getReservations = () =>{
     return applicationState.reservations.map(reservation => ({...reservation}))
 }
+export const sendReservation = (userServiceReservation) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userServiceReservation)
+    }
+
+
+    return fetch(`${API}/reservation`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+
+        })
+}
