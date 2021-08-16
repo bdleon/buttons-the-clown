@@ -1,15 +1,33 @@
 {
-    "clowns":[],
-    "jobCompletions":[],
-    "reservations":[
-        {
-            "id":1,
-            "parentName":"Beth",
-            "childName":"lucas",
-            "numberOfChildren": 20,
-            "address": "123 Galaxy dr",
-            "date":"2021-05-27",
-            "length": 2
-        }
-    ]
+  "clowns": [],
+  "jobCompletions": [],
+  "reservations": [
+    {
+      "id": 1,
+      "parentName": "Beth",
+      "childName": "lucas",
+      "numberOfChildren": 20,
+      "address": "123 Galaxy dr",
+      "date": "2021-05-27",
+      "length": 2
+    },
+    {
+      "parentName": "brandon",
+      "childName": "axel",
+      "numberOfChildren": "4",
+      "address": "123 gala",
+      "date": "2021-08-19",
+      "length": "5",
+      "id": 2
+    },
+    {
+      "parentName": "coco",
+      "childName": "paul",
+      "numberOfChildren": "57",
+      "address": "424 gaga",
+      "date": "2021-08-26",
+      "length": "6",
+      "id": 3
+    }
+  ]
 }
