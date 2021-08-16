@@ -1,5 +1,15 @@
 {
     "clowns":[],
     "jobCompletions":[],
-    "reservations":[]
+    "reservations":[
+        {
+            "id":1,
+            "parentName":"Beth",
+            "childName":"lucas",
+            "numberOfChildren": 20,
+            "address": "123 Galaxy dr",
+            "date":"2021-05-27",
+            "length": 2
+        }
+    ]
 }
