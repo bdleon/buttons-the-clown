@@ -1,8 +1,16 @@
-import { getReservations } from "./dataAccess.js"
+import { deleteReservation, getReservations } from "./dataAccess.js"
 import { getClowns } from "./dataAccess.js"
 
 
 
+const mainContainer = document.querySelector("#container")
+
+mainContainer.addEventListener("click", click => {
+    if (click.target.id.startsWith("reservation--")) {
+        const [,reservationId] = click.target.id.split("--")
+        deleteReservation(parseInt(reservationId))
+    }
+})
 
 
 
@@ -19,11 +27,11 @@ const convertReservationToListElement = (reservation) => {
    
     return `
     <li class="list">
-    <select><option class="input" name="clown" value="${foundClown.id}">${foundClown.name}</option></select>
+    <select name="clowns"><option value="${foundClown.id}">${foundClown.name}</option></select>
     Parent ${reservation.parentName} and Child ${reservation.childName} want an event on
     ${reservation.date} for ${reservation.length} hours
-     <button class="request__delete"
-    id="request--${reservation.id}">Deny</button>
+     <button class="reservation__delete"
+    id="reservation--${reservation.id}">Deny</button>
    
     </li>
 `
