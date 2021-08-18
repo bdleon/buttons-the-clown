@@ -14,12 +14,12 @@ mainContainer.addEventListener("click", clickEvent => {
 
         // Make an object out of the user input
         const dataToSendToAPI = {
-            parentName: userParentName,
-            childName: userChildName,
-            numberOfChildren: userNumberOfChildren,
-            address: userAddress,
+            parentName: userParentName.toUpperCase(),
+            childName: userChildName.toUpperCase(),
+            numberOfChildren: parseInt(userNumberOfChildren),
+            address: userAddress.toUpperCase(),
             date: userDate,
-            length: userLength
+            length: parseInt(userLength)
 
 
         }
@@ -58,7 +58,7 @@ export const serviceForm = () =>{
             <input type="number" name="serviceLength" class="input" />
         </div>
 
-        <button class="button" id="submitRequest">Submit Request</button>
+        <button class="button" id="submitRequest">Submit Reservation</button>
     `
 
     return html

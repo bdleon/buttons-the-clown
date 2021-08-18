@@ -1,6 +1,9 @@
 const applicationState = {
     reservations: [
         
+    ],
+    clowns: [
+        
     ]
 }
 
@@ -21,6 +24,23 @@ export const fetchReservations = () => {
 export const getReservations = () =>{
     return applicationState.reservations.map(reservation => ({...reservation}))
 }
+/////this will fetch clown from database.json
+export const fetchClowns = () => {
+    return fetch(`${API}/clowns`)
+        .then(response => response.json())
+        .then(
+            (serviceClown) => {
+                // Store the external state in application state
+                applicationState.clowns = serviceClown
+            }
+        )
+}
+
+export const getClowns =() =>{
+    return applicationState.clowns.map(clown =>({...clown}))
+}
+
+
 export const sendReservation = (userServiceReservation) => {
     const fetchOptions = {
         method: "POST",

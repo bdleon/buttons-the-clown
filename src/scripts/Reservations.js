@@ -1,4 +1,5 @@
 import { getReservations } from "./dataAccess.js"
+import { getClowns } from "./dataAccess.js"
 
 
 
@@ -8,11 +9,24 @@ import { getReservations } from "./dataAccess.js"
 
 
 const convertReservationToListElement = (reservation) => {
-    return `
-    <li class="list>
-    ${reservation.parentName}
+    const clowns = getClowns()
+    let foundClown = clowns.filter(
+        (clown) => {
+            return clown
+        }
+    )
+    
    
-</li>`
+    return `
+    <li class="list">
+    <select><option class="input" name="clown" value="${foundClown.id}">${foundClown.name}</option></select>
+    Parent ${reservation.parentName} and Child ${reservation.childName} want an event on
+    ${reservation.date} for ${reservation.length} hours
+     <button class="request__delete"
+    id="request--${reservation.id}">Deny</button>
+   
+    </li>
+`
 }
 
 
@@ -21,14 +35,16 @@ const convertReservationToListElement = (reservation) => {
 
 
 
-export const reservations = () =>{
+export const reservations = () => {
     const reservations = getReservations()
+    const clowns = getClowns()
+    console.log(clowns)
+
 
     let html = `
         <ul>
-            ${
-                reservations.map(convertReservationToListElement).join("")
-            }
+            
+            ${reservations.map(convertReservationToListElement).join("")}
         </ul>
     `
 

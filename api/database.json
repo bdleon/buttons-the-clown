@@ -1,5 +1,14 @@
 {
-  "clowns": [],
+  "clowns": [
+    {
+      "id": 1,
+      "name": "Buttons"
+    },
+    {
+      "id": 2,
+      "name": "Lollipop"
+    }
+  ],
   "jobCompletions": [],
   "reservations": [
     {
@@ -12,21 +21,21 @@
       "length": 2
     },
     {
-      "parentName": "brandon",
-      "childName": "axel",
-      "numberOfChildren": "4",
-      "address": "123 gala",
-      "date": "2021-08-19",
-      "length": "5",
+      "parentName": "PATRIK",
+      "childName": "SANDY",
+      "numberOfChildren": 7,
+      "address": "123 XZY",
+      "date": "2021-08-20",
+      "length": 7,
       "id": 2
     },
     {
-      "parentName": "coco",
-      "childName": "paul",
-      "numberOfChildren": "57",
-      "address": "424 gaga",
-      "date": "2021-08-26",
-      "length": "6",
+      "parentName": "RED",
+      "childName": "BLUE",
+      "numberOfChildren": 8,
+      "address": "123 QWE",
+      "date": "2021-08-25",
+      "length": 4,
       "id": 3
     }
   ]
