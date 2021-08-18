@@ -3,7 +3,7 @@ const applicationState = {
         
     ],
     clowns: [
-        
+
     ]
 }
 
@@ -57,4 +57,13 @@ export const sendReservation = (userServiceReservation) => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
 
         })
+}
+
+export const deleteReservation = (id) =>{
+    return fetch(`${API}/reservations/${id}`, {method: "DELETE"})
+    .then(
+        () => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+        }
+    )
 }
