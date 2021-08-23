@@ -17,3 +17,10 @@
     color: lightgoldenrodyellow;
     font-size: 1rem;
 }
+
+.list{
+    margin: 12px;
+    border-style: solid black 1px;
+    padding: 10px;
+    list-style-type: none;
+}
